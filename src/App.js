@@ -29,6 +29,7 @@ const App = (props) => {
     <PersistGate loading={null} persistor={persistor}>
       <Router>
         <Switch>
+          <PublicRoute exact path="/admin" restricted={false} component={Login} />
           <PublicRoute exact path="/" restricted={false} component={Landing} />
           <PublicRoute path="/login" restricted component={Login} />
           <PublicRoute exact path="/register" restricted component={Register} />
